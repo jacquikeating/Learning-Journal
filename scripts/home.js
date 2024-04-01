@@ -1,6 +1,7 @@
 /* ELEMENT REFERENCES ------------------------- */
+const articlesContainer = document.getElementById("articles-container")
+const heroSection = document.getElementById("hero-section")
 const viewMore = document.getElementById("view-more-unbtn")
-const postPreviewsContainer = document.getElementById("post-previews-container")
 const menuOpenBtn = document.getElementById("menu-btn")
 const menuCloseBtn = document.getElementById("menu-close-btn")
 const navModal = document.getElementById("nav-modal")
@@ -13,7 +14,7 @@ const posts = []    // articles are added to the beginning of the array using un
 /* EVENT LISTENERS ------------------------- */
 menuOpenBtn.addEventListener("click", openMenuModal)
 menuCloseBtn.addEventListener("click", closeMenuModal)
-viewMore.addEventListener("click", renderAllPostPreviews)
+viewMore.addEventListener("click", renderAllPosts)
 
 
 /* POST CONSTRUCTOR ------------------------- */
@@ -28,18 +29,39 @@ function Post(postNum, title, date, teaser, img, altText) {
 }
 
 
-/* POST PROTOTYPE METHOD TO GENERATE POST HTML ------------------------- */
-Post.prototype.makePostPreview = function() {
-    let newPreview = document.createElement("article")
-    postPreviewsContainer.appendChild(newPreview)
-    newPreview.innerHTML = `<a href="../post${this.postNum}.html" class="post-link">
-                            <article class="post-preview">
-                                <img src="${this.img}" alt="${this.altText}" class="article-img">
+/* POST PROTOTYPE METHODS TO GENERATE POST HTML ------------------------- */
+Post.prototype.makePost = function() {
+    let newPost = document.createElement("article")
+    articlesContainer.appendChild(newPost)
+    newPost.innerHTML = `
+                        <article>
+                            <img src="${this.img}" alt="${this.altText}" class="article-img">
+                            <p class="date">${this.date}</p>
+                            <h4>${this.title}</h4>
+                            <p class="article-preview">
+                                ${this.teaser}
+                            </p>
+                        </article>
+                        `
+    
+}
+
+Post.prototype.makeHeroPost = function() {
+    let heroPost = document.createElement("article")
+    heroPost.setAttribute("id", "hero-article")
+    heroSection.appendChild(heroPost)
+    heroPost.innerHTML = `
+                            <div id="hero-article-text">
                                 <p class="date">${this.date}</p>
                                 <h4>${this.title}</h4>
-                                <p class="article-preview">${this.teaser}</p>
-                            </article>
-                            </a>`
+                                <p class="article-preview">
+                                    ${this.teaser}
+                                </p>
+                            </div>
+                         `
+                            
+   heroPost.style.backgroundImage = `url("${this.img}")`
+   heroPost.classList.add("hero-img")
 }
 
 
@@ -59,11 +81,13 @@ let post5 = new Post(5, "Starting with Scrimba", "March 27, 2024", "Lorem ipsum 
 let post6 = new Post(6, "Teamwork Makes the Dream Work", "March 29, 2024", "My adventures in group projects and remote collaboration, plus why I think they're so important.", "https://images.unsplash.com/photo-1606770347238-77fcfd29906c?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "A cozy study space: a table with a dotted coffee mug, a potted plant, and an open laptop showing a Zoom call with at least 14 partipants.")
 
 
-/* SEPARATING NEWEST 3 POSTS FROM REST ------------------------- */
+/* SEPARATING NEWEST POST FROM REST ------------------------- */
+let newestPost = posts.slice(0, 1)
+let olderPosts = posts.slice(1)
 let postPreviews = posts.slice(0, 3)
 
 
-/* FUNCTIONS -------------- */
+/* FUNCTIONS ------------------------- */
 function openMenuModal() {
     navModal.style.display = "flex"
 }
@@ -74,20 +98,36 @@ function closeMenuModal() {
 }
 
 
-function renderPostPreviews() {
-    for(let i = 0; i < postPreviews.length; i++) {
-        postPreviews[i].makePostPreview()
+function renderAllPosts() {
+
+    articlesContainer.innerHTML = ''
+
+    for(let i = 0; i < olderPosts.length; i++) {
+        olderPosts[i].makePost()
     }
+
+    viewMore.style.display = "none"
 }
 
 
-function renderAllPostPreviews() {
-    for(let i = 0; i < posts.length; i++) {
-        posts[i].makePostPreview()
+function renderNewestPosts() {
+
+    let bodyWidth = document.querySelector("body").offsetWidth
+
+    newestPost[0].makeHeroPost()
+
+    if (bodyWidth >= 550 && bodyWidth < 1000) { 
+        // renders 4 posts instead of 3 when using 2-column layout
+        for(let i = 0; i < 4; i++) {
+            olderPosts[i].makePost()
+        }
+
+    } else {
+        for(let i = 0; i < 3; i++) {
+            olderPosts[i].makePost()
+        }
     }
 }
+    renderNewestPosts()
 
 
-
-
-renderPostPreviews()
