@@ -33,7 +33,7 @@ function Post(postNum, title, date, teaser, img, altText) {
 Post.prototype.makePost = function() {
     let newPost = document.createElement("article")
     articlesContainer.appendChild(newPost)
-    newPost.innerHTML = `
+    newPost.innerHTML = `<a href="../post${this.postNum}.html" class="post-link">
                         <article>
                             <img src="${this.img}" alt="${this.altText}" class="article-img">
                             <p class="date">${this.date}</p>
@@ -42,6 +42,7 @@ Post.prototype.makePost = function() {
                                 ${this.teaser}
                             </p>
                         </article>
+                        </a>
                         `
     
 }
