@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Learning Journal</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/1f9b885cb6.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+            <header>
+                <h1><i class="fa-solid fa-feather-pointed" id="title-icon"></i> My Learning Journal</h1>
+                <i class="fa-solid fa-bars" id="menu-btn" aria-label="menu button"></i>
+                <div id="nav-modal">
+                    <i class="fa-solid fa-xmark" id="menu-close-btn"></i>
+                    <nav>
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./about.html">About Me</a></li>
+                            <li><a href="./portfolio.html">My Work</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            
+            <main>
+                <img src="./images/desk.jpg" class="full-img">
+                <div class="page-container">
+                    
+                    <section id="article-body">
+                            <figcaption class="image-credit">Image credit: 
+                                    <a href=
+                                    "https://unsplash.com/@jessbaileydesigns"
+                                    alt="A wall housing dozens of small wooden drawers for archiving index cards, each neatly labelled.">
+                                    Jess Bailey</a>
+                                </figcaption>
+                                
+                        <h2 class="article-title-h2">My Work</h2>
+                        <p>
+                            This isn't a portfolio site. It's just a blog. But if you want to take a look at my progress, I am happy to share my <a href="https://github.com/jacquikeating">GitHub profile</a> and links to my projects with live deploys.
+                            <br></br>
+                            <a href="https://bestbank-solo.netlify.app/"><span class="emphasis">BestBank:</span> A banking website. Currently working on taking this one to the next level with a team of Scrimba students!</a>
+                            <br></br>
+                            <a href="https://jqi-shopping-list.netlify.app/"><span class="emphasis">Shopping List:</span> A web app designed to be used in the grocery store to add and check off items in real time using Firebase.</a>  
+                            <br></br>
+                            <a href="https://dog-form.netlify.app/"><span class="emphasis">The Puppy Playdate Club:</span> A signup form for an imaginary dog club that incorporates every type of HTML input.</a>
+                            <br></br>
+                            <a href="https://css-selectors-for-dummies.netlify.app/"><span class="emphasis">CSS Selectors for Dummies:</span> A (sort of) technical documentation page written in a very non-technical fashion.</a>  
+                            <br></br>
+                            <a href="https://jqi-basketball-scoreboard.netlify.app"><span class="emphasis">Basketball Scoreboard:</span> A simple interface with two iterators for tracking basketball scores.</a>
+                            <br></br>
+                            <a href="https://oldagram-jacqui.netlify.app/"><span class="emphasis">Oldagram:</span> An Instagram clone for classical painters.</a>
+                            <br></br>
+                            <a href="https://password-gen-jacqui.netlify.app"><span class="emphasis">Password Generator:</span> A basic lil' password generator. Does exactly what it says on the tin.</a>
+                            <br></br>
+                            <a href="https://the-cunning-artisan.netlify.app"><span class="emphasis">The Cunning Artisan:</span> If Dungeons & Dragons characters had e-commerce websites, well... most would probably be this weird.</a>
+                            <br></br>
+                            <a href="https://cookie-consent-from-hell.netlify.app/"><span class="emphasis">Cookie Consent from Hell:</span> The worst website I've ever made. I hope never to be asked to sink to these depths again.</a>
+                            
+                        </p>
+                        
+                            
+                    </section>
+                
+                    <h3 class="recent-posts">Recent Posts</h3>
+                    
+                    <section id="post-previews-container"></section>
+                    
+                    <div class="view-more">
+                        <button id="view-more-unbtn">View More
+                            <br>
+                            <i class="fa-solid fa-angle-down" id="angle-icon"></i>
+                        </button>
+                    </div> <!-- view-more -->
+                                    
+            </main>
+            
+        </div>
+        
+        <footer>
+                <p>My Learning Journal</p>
+                <p>© 2024</p>
+            </footer>
+        
+        <script src="./scripts/index.js" type="module"></script>
+        
+    </body>
+</html>

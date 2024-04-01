@@ -127,11 +127,18 @@ p {
     color: var(--clr-text);
     text-decoration: none;
 }
+
 .image-credit {
     font-style: italic;
     font-weight: 200;
     font-size: 1.2rem;
     margin-top: 0.5rem;
+}
+
+.mid-article-list {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 2rem 0 2rem 3rem;
 }
 
 footer li, footer a, footer p, footer i {
@@ -374,7 +381,7 @@ nav ul {
     
     #intro,
     #article-body {
-        max-width: 800px;
+        max-width: 1200px;
         margin: 0 auto;
     }
     
