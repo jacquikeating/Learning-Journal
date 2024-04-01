@@ -52,11 +52,11 @@ let post2 = new Post(2, "In the Beginning, There Was freeCodeCamp", "March 24, 2
 
 let post3 = new Post(3, "My External Brain", "March 29, 2024", "How I built a learning system to overcome my greatest weakness.", "././images/drawers.avif", "A wall housing dozens of small wooden drawers for archiving index cards, each neatly labelled.")
 
-let post4 = new Post(4, "Jumping the JavaScript Hurdle", "March 29, 2024", "I thought I was too stupid to learn a programming language. Then I proved myself wrong.", "https://images.unsplash.com/photo-1500099817043-86d46000d58f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "A stormy ocean horizon, with a single hand reaching up from the waves.")
+let post4 = new Post(4, "Jumping the JavaScript Hurdle", "March 29, 2024", "I thought I was too stupid to learn a programming language. Then I proved myself wrong.", "././images/drowning.jpg", "A stormy ocean horizon, with a single hand reaching up from the waves.")
 
 let post5 = new Post(5, "Starting with Scrimba", "March 27, 2024", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor condimentum nunc fringilla venenatis.", "././images/scrimba-logo-bg.png", "The Scrimba logo, which looks like an S made up of purple, green, and yellow rounded shapes.")
 
-let post6 = new Post(6, "Teamwork Makes the Dream Work", "March 29, 2024", "My adventures in group projects and remote collaboration, plus why I think they're so important.", "https://images.unsplash.com/photo-1606770347238-77fcfd29906c?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "A cozy study space: a table with a dotted coffee mug, a potted plant, and an open laptop showing a Zoom call with at least 14 partipants.")
+let post6 = new Post(6, "Teamwork Makes the Dream Work", "March 29, 2024", "My adventures in group projects and remote collaboration, plus why I think they're so important.", "././images/zoom-call-2.jpg", "A cozy study space: a table with a dotted coffee mug, a potted plant, and an open laptop showing a Zoom call with at least 14 partipants.")
 
 
 /* SEPARATING NEWEST 3 POSTS FROM REST ------------------------- */
@@ -82,6 +82,7 @@ function renderPostPreviews() {
 
 
 function renderAllPostPreviews() {
+    postPreviewsContainer.innerHTML = ''
     for(let i = 0; i < posts.length; i++) {
         posts[i].makePostPreview()
     }
