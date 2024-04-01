@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Learning Journal</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/1f9b885cb6.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+            <header>
+                <h1><i class="fa-solid fa-feather-pointed" id="title-icon"></i> My Learning Journal</h1>
+                <i class="fa-solid fa-bars" id="menu-btn" aria-label="menu button"></i>
+                <div id="nav-modal">
+                    <i class="fa-solid fa-xmark" id="menu-close-btn"></i>
+                    <nav>
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./about.html">About Me</a></li>
+                            <li><a href="./portfolio.html">My Work</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            
+            <main>
+                <img src="./images/drawers.avif" class="full-img" alt="A stormy ocean horizon, with a single hand reaching up from the waves.">
+                <div class="page-container">
+                    
+                    <section id="article-body">
+                            <figcaption class="image-credit">Image credit: 
+                                    <a href=
+                                    "https://unsplash.com/@sseeker">
+                                    Stormseeker</a>
+                                </figcaption>
+                                
+                        <h2 class="article-title-h2">Jumping the JavaScript Hurdle</h2>
+                        <p>
+                            Learning HTML and CSS was like skipping through a sunlit meadow. 
+                            <br>
+                            JavaScript felt like running face-first into a brick wall.
+                            
+                            <br><br>
+                            
+                            I had a really hard time in my first week of learning JavaScript. I actually struggled so much that I thought, "Am I really cut out for this career? I should just quit. I'm not smart enough." Luckily, I soon discovered that my problems with JavaScript were not the result of a personal failure, but a pedagogical one.
+                            
+                            <br><br>
+                            
+                            My first introduction to JavaScript was freeCodeCamp's <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/">JavaScript Algorithms and Data Structures</a> course, which is still in beta. The <span class="emphasis">very first</span> lesson in that curriculum is a 174-step monster that attempts to teach all of these concepts at once:
+                        </p>
+                        
+                        <ul>
+                            <li>Variables</li>
+                            <li>Data types</li>
+                            <li>Arrays</li>
+                            <li>Objects (and arrays of objects)</li>
+                            <li>Functions</li>
+                            <li>Loops</li>
+                            <li>Conditionals</li>
+                            <li>Query selectors</li>
+                            <li>Local and global scope</li>
+                            <li>Click events</li>
+                            <li>Random number generation</li>
+                            <li>Rendering dynamic HTML content via JavaScript*</li>
+                        </ul>
+                        
+                        <p>
+                            And to top it all off, the system for validating code and providing feedback was broken. If the user makes a syntax error in fCC's code editor, it is unable to tell you what you did wrong or even that you've done anything wrong at all -- it simply makes the "Check Your Code" button stop doing anything, which also prevents you from advancing to the next exercise. It's a good thing JavaScript newbies <span class="emphasis">never</span> make syntax errors, isn't it?
+                            
+                            <br><br>
+                            
+                            Maybe that teaching style works for some people, but it certainly wasn't working for me. I decided to try this silly-looking little site called <a href="https://scrimba.com/learn/learnjavascript">Scrimba</a>. The difference was night and day. The introductory lesson there is much less ambitious. It takes baby steps and offers a great deal of hand-holding along the way. And you know what? I think that's a smarter approach. Sure, the end result is less impressive, but because it was more achievable, I retained much more of the information.
+                            
+                            <br><br>
+                            
+                            Here's a metaphor: it's like taking an introductory cooking class. The freeCodeCamp cooking class is a 7-hour workshop that teaches first-time cooks how to make beef wellington in 174 steps. And what if you do any of it wrong? The chef simply crosses his arms and says nothing, while blocking you from trying the next step. 
+                            
+                            <br><br>
+                            
+                            On the other hand, the Scrimba cooking class first teaches you how to make tomato sauce. After that, you learn how to boil noodles. Then the chef asks, "Okay, how do you think we can combine these to make pasta?" Whether you successfully make pasta or not (but you probably will, because it's pretty damn simple), the chef then demonstrates his pasta-making techniques.
+                            
+                            <br><br>
+                            
+                            I love freeCodeCamp and I'm glad it exists (in fact, <a href="../post2.html">I've sung their praises in a previous post</a>), but their new JavaScript curriculum nearly made me quit coding. It's still in beta, so I hope they will revise it. If I hadn't discovered Scrimba, I might written myself off as an utter moron who would never learn programming.
+                            <br><br>
+                            All of this to say: <span class="emphasis">if you aren't learning, try switching teachers.</span>
+                        </p>
+                        
+                    </section>
+                
+                    <h3 class="recent-posts">Recent Posts</h3>
+                    
+                    <section id="post-previews-container"></section>
+                    
+                    <div class="view-more">
+                        <button id="view-more-unbtn">View More
+                            <br>
+                            <i class="fa-solid fa-angle-down" id="angle-icon"></i>
+                        </button>
+                    </div> <!-- view-more -->
+                                    
+            </main>
+            
+        </div>
+        
+        <footer>
+                <p>My Learning Journal</p>
+                <p>© 2024</p>
+            </footer>
+        
+        <script src="./scripts/index.js"></script>
+        
+    </body>
+</html>

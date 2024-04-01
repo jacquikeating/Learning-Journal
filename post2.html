@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Learning Journal</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/1f9b885cb6.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+            <header>
+                <h1><i class="fa-solid fa-feather-pointed" id="title-icon"></i> My Learning Journal</h1>
+                <i class="fa-solid fa-bars" id="menu-btn" aria-label="menu button"></i>
+                <div id="nav-modal">
+                    <i class="fa-solid fa-xmark" id="menu-close-btn"></i>
+                    <nav>
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./about.html">About Me</a></li>
+                            <li><a href="./portfolio.html">My Work</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            
+            <main>
+                <img src="./images/fcc.png" class="full-img">
+                <div class="page-container">
+                    
+                    <section id="article-body">
+                            <figcaption class="image-credit">Image credit: 
+                                    <a href=
+                                    "https://www.freecodecamp.org/">
+                                    freeCodeCamp</a>
+                                </figcaption>
+                                
+                        <h2 class="article-title-h2">In the Beginning, There Was freeCodeCamp</h2>
+                        <p>
+                            
+                            Like so many other self-taught developers, my learning journey began with freeCodeCamp. It’s one of the most well-known sites out there — and it’s, well, free. It’s a great place to start.
+                            <br><br>
+                            I found the lessons in the Responsive Design module easy to follow, and the projects provided just the right level of difficulty. The things I completed for freeCodeCamp truly felt like my own creations, and I was particularly proud of two of them. On my Survey Form, I challenged myself to incorporate every kind of HTML, just so I could get familiar with them all. Then when I started my third project, the Technical Documentation Page, I chose the topic I was having the most difficulty with at the time: obscure CSS selectors. They say the best way to learn is by teaching. By pretending I was explaining CSS selectors to someone else, I was really teaching myself. And it worked!
+                            <br><br>
+                            I put a lot of effort into those projects. Too much effort, I realized, as I blew through a third hour of agonizing over the design of my Personal Portfolio Webpage project. I had an epiphany: no matter how “perfect” I try to make this, in 6 months’ time I’ll have learned so much that my first projects will look like my childhood finger paintings. My philosophy shifted from “I must build the best thing I possibly can” to “I’m going to build this as a draft version that I can come back to and improve later.”
+                            <br><br>
+                            By the time I finished fCC’s responsive design curriculum, I felt confident that I was steering my life in a very promising direction. Sure, that module was super basic stuff — “baby’s first code” — but those basics provided the foundation for me and so many other aspiring web developers. The freeCodeCamp contributors have dedicated their personal time and energy to teaching others. I think that is such a powerful and beautiful thing to do. Thanks for being there, freeCodeCamp!                    
+                        </p>
+                                                        
+                    </section>
+                
+                    <h3 class="recent-posts">Recent Posts</h3>
+                    
+                    <section id="post-previews-container"></section>
+                    
+                    <div class="view-more">
+                        <button id="view-more-unbtn">View More
+                            <br>
+                            <i class="fa-solid fa-angle-down" id="angle-icon"></i>
+                        </button>
+                    </div> <!-- view-more -->
+                                    
+            </main>
+            
+        </div>
+        
+        <footer>
+                <p>My Learning Journal</p>
+                <p>© 2024</p>
+            </footer>
+        
+        <script src="./scripts/index.js" type="module"></script>
+        
+    </body>
+</html>

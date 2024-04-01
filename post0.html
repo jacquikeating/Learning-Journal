@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Learning Journal</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/1f9b885cb6.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+            <header>
+                <h1><i class="fa-solid fa-feather-pointed" id="title-icon"></i> My Learning Journal</h1>
+                <i class="fa-solid fa-bars" id="menu-btn" aria-label="menu button"></i>
+                <div id="nav-modal">
+                    <i class="fa-solid fa-xmark" id="menu-close-btn"></i>
+                    <nav>
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./about.html">About Me</a></li>
+                            <li><a href="./portfolio.html">My Work</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            
+            <main>
+                <img src="./images/neopets.webp" class="full-img">
+                <div class="page-container">
+                    
+                    <section id="article-body">
+                            <figcaption class="image-credit">Image credit: 
+                                <a href=
+                                "https://www.neopets.com/">
+                                neopets.com</a>
+                                </figcaption>
+                                
+                        <h2 class="article-title-h2">The Neopets to Developer Pipeline</h2>
+                        <p>
+                            When I was 10 years old, my family had a computer in the living room equipped with the latest and greatest technology: a dial-up modem. My siblings and I would bicker over whose turn it was to play computer games, and of course, everything ground to a halt whenever Mom had an important phone call to make. Regardless, all three of us kids got very, very deep into Neopets. In my case, so deep that it led me to my future career.
+                            <br><br>
+                            Neopets had forum boards where you could chat with other players — whether that was to buy and sell in-game items, to discuss strategies for beating the hardest mini-games, or just to talk about whatever was interesting to a bunch of geeky kids in the early 2000s. On those boards, users could customize their profiles and posts using HTML, and even make little “webpages.”</p>
+                            
+                            <div class="mid-article-img-container">
+                                <img class="mid-article-img" src="https://preview.redd.it/defunct-guilds-that-still-exist-on-neopets-glitter-gloss-v0-627wbdllzr8a1.png?width=1080&crop=smart&auto=webp&s=7abd3ada5da81547b780e9f99154be49a54321bd"
+                                alt="A screenshot of a Neopets guild page. At the top left, the heading 'Glitter, Gloss, and... Miley Cyrus!' is written in funky blue text with pink outlines. To the right is a large photo of Miley Cyrus that spans almost the entire height of the page. There's also a colourful spiral background, pictures of lip gloss superimposed all over the page, and several mostly-empty sections that appear to have broken code.">
+                                <figcaption class="image-credit ">
+                                    Image credit: <a href=
+                                        "https://www.neopets.com/">
+                                        neopets.com</a> 
+                                        via <a href= "https://www.reddit.com/r/neopets/comments/zxxai5/defunct_guilds_that_still_exist_on_neopets/">
+                                        reddit</a>
+                                </figcaption>
+                            </div>
+                            <p>
+                            The internet in the age of AOL and Myspace was not at all interested in minimalism. You’ve probably seen the blindingly bright and charmingly chaotic “vintage” websites from that era. Now imagine what you got when none of the web designers were older than 12. There were a minimum of 6 colours and 3 fonts on each page. Things sparkled and wiggled and scrolled. There was music that played as soon as you opened a page (and good luck trying to turn it off). There was word art, clip art, and Angelfire.com. Layouts had to be jury-rigged by stuffing your entire page into an HTML table element. In short, it was a wondrous playground I immersed myself in, all in the name of having the coolest Neopets profile ever.
+                            <br><br>
+                            When I got involved with Scrimba’s student community, I discovered I was not the only ‘90s kid who fell in love with HTML by way of Neopets. Micha, one of the bootcamp mentors, described it as “the Neopets to developer pipeline.” I think that’s both hilarious and weirdly apt. As Neopets prepares to celebrate its 25th anniversary next year, we can look back on it fondly as the gateway drug to coding for hundreds (or perhaps even thousands) of millennial developers.
+                        </p>
+                    </section>
+                
+                    <h3 class="recent-posts">Recent Posts</h3>
+                    
+                    <section id="post-previews-container"></section>
+                    
+                    <div class="view-more">
+                        <button id="view-more-unbtn">View More
+                            <br>
+                            <i class="fa-solid fa-angle-down" id="angle-icon"></i>
+                        </button>
+                    </div> <!-- view-more -->
+                                    
+            </main>
+            
+        </div>
+        
+        <footer>
+                <p>My Learning Journal</p>
+                <p>© 2024</p>
+            </footer>
+        
+        <script src="./scripts/index.js" type="module"></script>
+        
+    </body>
+</html>

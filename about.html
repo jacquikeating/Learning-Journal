@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Learning Journal</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/1f9b885cb6.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        <div class="page-container">
+            <header>
+                <h1><i class="fa-solid fa-feather-pointed" id="title-icon"></i> My Learning Journal</h1>
+                <i class="fa-solid fa-bars" id="menu-btn" aria-label="menu button"></i>
+                <div id="nav-modal">
+                    <i class="fa-solid fa-xmark" id="menu-close-btn"></i>
+                    <nav>
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./about.html">About Me</a></li>
+                            <li><a href="./portfolio.html">My Work</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            
+            <main>
+                
+                <section id="intro">
+                    <div class="intro-top">
+                        <img src="./images/selfie.jpg" alt="it me" class="headshot">
+                        <div class="intro-text">
+                            <h2>Hi there! I'm Jacqui. Welcome to my learning journal.</h2>
+                            <p>
+                                Here you'll find a casual collection of stories, lessons learned, and stream-of-consciousness nonsense from an aspiring web developer. I have been self-teaching for around 4 months now, using a blend of freeCodeCamp, Scrimba, an array of YouTube videos, and a couple books. My goal is to become a hireable dev this summer!
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <h3>How I started</h3>
+                    <p>
+                        As a child of the Internet age, my first introduction to code was around age 10... on the Neopets chat boards, where users could customize their profiles using HTML. 
+                        <br><br>
+                        A decade later as a graphic design major, I fell back in love with web dev in my second and third year web design classes. Although the curriculum's primary focus was UX, we were taught enough HTML and CSS to build responsive websites. I felt so much joy watching my code come to life that I realized <span class="emphasis">this</span>, even more than graphic design, was what I wanted to do for the rest of my life.
+                    </p>
+                    
+                    <h3>My learning process</h3>
+                    <p>
+                        I embarked on my self-study journey in December of 2023. I owe so much of my progress to two things: obsessive notetaking and Scrimba. 
+                        <br>
+                        <br>
+                        Right from the start, I decided to put everything I learned into a Notion doc. And I mean <span class="emphasis">everything</span> — it's more like a Notion library now. It's been a lifesaver, and the #1 thing I'd recommend to any other newbies out there.
+                        <br>
+                        <br>
+                        As for content, Scrimba has been my most valuable resource. Hands-on learning and a great community are game changers!
+                    </p>
+                </section>
+                
+                    <h3 class="recent-posts">Recent Posts</h3>
+                    
+                    <section id="post-previews-container"></section>
+                    
+                    <div class="view-more">
+                        <button id="view-more-unbtn">View More
+                            <br>
+                            <i class="fa-solid fa-angle-down" id="angle-icon"></i>
+                        </button>
+                    </div> <!-- view-more -->
+                                    
+            </main>
+            
+        </div>
+        
+        <footer>
+            <p>My Learning Journal</p>
+            <p>© 2024</p>
+        </footer>
+        
+        <script src="scripts/index.js"></script>
+        
+    </body>
+</html>
