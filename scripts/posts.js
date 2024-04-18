@@ -1,20 +1,10 @@
 /* ELEMENT REFERENCES ------------------------- */
 const articlesContainer = document.getElementById("articles-container")
 const heroSection = document.getElementById("hero-section")
-const viewMore = document.getElementById("view-more-unbtn")
-const menuOpenBtn = document.getElementById("menu-btn")
-const menuCloseBtn = document.getElementById("menu-close-btn")
-const navModal = document.getElementById("nav-modal")
 
 
 /* GLOBAL VARIABLES ------------------------- */
 const posts = []    // articles are added to the beginning of the array using unshift()
-
-
-/* EVENT LISTENERS ------------------------- */
-menuOpenBtn.addEventListener("click", openMenuModal)
-menuCloseBtn.addEventListener("click", closeMenuModal)
-viewMore.addEventListener("click", renderAllPosts)
 
 
 /* POST CONSTRUCTOR ------------------------- */
@@ -92,16 +82,6 @@ let postPreviews = posts.slice(0, 3)
 
 
 /* FUNCTIONS ------------------------- */
-function openMenuModal() {
-    navModal.style.display = "flex"
-}
-
-
-function closeMenuModal() {
-    navModal.style.display = "none"
-}
-
-
 function renderAllPosts() {
 
     articlesContainer.innerHTML = ''
@@ -117,27 +97,14 @@ function renderAllPosts() {
 
 function renderNewestPosts() {
 
-    let bodyWidth = document.querySelector("body").offsetWidth
-
     newestPost[0].makeHeroPost()
 
     for(let i = 0; i < 6; i++) {
         olderPosts[i].makePost()
     }
-
-    // if (bodyWidth >= 550 && bodyWidth < 1000) { 
-    //     // renders 4 posts instead of 3 when using 2-column layout
-    //     for(let i = 0; i < 4; i++) {
-    //         olderPosts[i].makePost()
-    //     }
-
-    // } else {
-    //     for(let i = 0; i < 3; i++) {
-    //         olderPosts[i].makePost()
-    //     }
-    // }
-    
 }
-    renderNewestPosts()
+
+renderNewestPosts()
 
 
+export { posts, renderAllPosts, renderNewestPosts }
